@@ -3,8 +3,8 @@
 import { useState } from "react"
 import { GlobeIcon, User } from "lucide-react"
 import Image from "next/image"
-import { Dropdown, DropdownItem } from "../../ui/dropdown"
-import { languages, currencies } from "../../../constants/data"
+import { Dropdown, DropdownItem } from "../../../ui/dropdown"
+import { languages, currencies } from "../../../../constants/data"
 
 export function TopBanner() {
     const [selectedLang, setSelectedLang] = useState(languages[0])

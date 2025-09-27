@@ -1,4 +1,5 @@
-import { Header } from "../components/landing/header"
+import { Header } from "../components/layout/LandingPageLayout/header"
+
 
 
 export default function PublicLayout({ children }) {

@@ -2,7 +2,7 @@ import { TopBanner } from "./top-banner"
 import { MainNav } from "./main-nav"
 import { MobileMenu } from "./mobile-menu"
 import { NavActions } from "./nav-actions"
-import { Logo } from "../../ui/logo"
+import { Logo } from "../../../ui/logo"
 
 export function Header() {
     return (

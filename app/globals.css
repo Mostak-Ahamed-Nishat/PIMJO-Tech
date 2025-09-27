@@ -132,6 +132,66 @@ body {
   animation: fadeOut 0.15s ease-in forwards;
 }
 
+
+/* Swiper   */
+/* Position like the mock */
+.hero-swiper .swiper-pagination {
+  bottom: 28px !important;
+}
+
+/* Pills instead of dots */
+.hero-swiper .swiper-pagination-bullet {
+  width: 28px;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.35);
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: width .25s ease, background-color .25s ease, opacity .25s ease;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  width: 36px;
+  background: #fff;
+  opacity: 1;
+}
+
+/* Optional: hover/focus */
+.hero-swiper .swiper-pagination-bullet:hover {
+  opacity: 0.9;
+}
+
+.hero-swiper .swiper-pagination-bullet:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 2px;
+}
+
+/* 20px from bottom, pill style like your mock */
+.hero-swiper .swiper-pagination {
+  bottom: 20px !important;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 28px;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.35);
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: width .25s ease, background-color .25s ease, opacity .25s ease;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  width: 36px;
+  background: #fff;
+  opacity: 1;
+}
+
+
+
+
+
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

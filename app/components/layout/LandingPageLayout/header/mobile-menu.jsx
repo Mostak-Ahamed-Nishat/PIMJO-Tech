@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
-import { navigationItems } from "../../../constants/data"
+import { navigationItems } from "../../../../constants/data"
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)

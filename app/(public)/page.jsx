@@ -1,10 +1,10 @@
-import React from 'react'
+import HeroSection from "../components/sections/HeroSection";
 
-function page() {
+
+export default function Page() {
     return (
-        <div
-            className='h-[200vh]'>This is Root page</div>
-    )
+        <div>
+            <HeroSection />
+        </div>
+    );
 }
-
-export default page
