@@ -1,26 +1,155 @@
 @import "tailwindcss";
 
+
 :root {
+  /* Light theme - PIMJO Design System (Default) */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1F2937;
+  /* Primary text */
+
+  /* Brand Colors */
+  --brand-primary: #3758F9;
+  --brand-secondary: #232939;
+
+  /* Text Colors */
+  --text-primary: #1F2937;
+  /* Titles, headings */
+  --text-secondary: #6B7280;
+  /* Body text */
+  --text-tertiary: #9CA3AF;
+  /* Captions, hints */
+  --text-error: #B91C1C;
+  /* Error text */
+
+  /* Background Colors */
+  --hero-bg: #111827;
+  --card-bg: #ffffff;
+  --border-color: #E5E7EB;
+
+  /* Button Colors */
+  --button-primary: #3758F9;
+  --button-outline: #1F2937;
+
+  /* Status Colors */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #B91C1C;
+}
+
+/* Manual dark mode toggle (dashboard only) */
+.dark {
+  --background: #101828;
+  /* Primary background */
+  --foreground: #FFFFFFE5;
+  /* Primary text (white 90% opacity) */
+
+  /* Text Colors (Dark) */
+  --text-primary: #FFFFFFE5;
+  /* White with 90% opacity */
+  --text-secondary: #98A2B3;
+  /* Secondary text */
+  --text-tertiary: #98A2B3;
+  /* Same as secondary for dark */
+
+  /* Background Colors (Dark) */
+  --card-bg: #1D2939;
+  /* Secondary background */
+  --border-color: #374151;
+
+  /* Active states */
+  --active-menu: #465FFF1F;
+  /* Brand with low opacity */
 }
 
 @theme inline {
+  /* Base colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Brand colors */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+
+  /* Text colors */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-error: var(--text-error);
+
+  /* Background colors */
+  --color-hero: var(--hero-bg);
+  --color-card: var(--card-bg);
+
+  /* Button colors */
+  --color-button-primary: var(--button-primary);
+  --color-button-outline: var(--button-outline);
+
+  /* Status colors */
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-feature-settings: "rlig"1, "calt"1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Utility classes */
+.animate-in {
+  animation: fadeInUp 0.2s ease-out forwards;
+}
+
+.animate-out {
+  animation: fadeOut 0.15s ease-in forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
